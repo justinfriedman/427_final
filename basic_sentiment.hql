@@ -1,4 +1,4 @@
-ADD FILE filer_words.py;
+ADD FILE filter_words.py;
 ADD FILE neg-words.txt;
 ADD FILE pos-words.txt;
 
