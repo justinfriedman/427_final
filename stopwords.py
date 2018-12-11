@@ -7,7 +7,7 @@ with open("new_stop_list") as file:
 stopword_set = set(text.split("\n"))
 for line in stdin:
     to_return = []
-    hw_id, hw_number, label, review = line.split('\t')
+    semester, hw_id, hw_number, label, review = line.split('\t')
     for a in [review.strip()]:
         new_word_list = []
         words = a.split()
@@ -16,4 +16,4 @@ for line in stdin:
                 new_word_list.append(word)
         new_words = ' '.join(new_word_list)
         to_return.append(new_words)
-    print '\t'.join([hw_id, hw_number, label, to_return[0]])
+    print '\t'.join([semester, hw_id, hw_number, label, to_return[0]])
