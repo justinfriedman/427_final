@@ -2,7 +2,7 @@ import os
 import re
 
 hw_reviews = ""
-semesters = ['FL2016', 'SP2017', 'FL2017', 'SP2018']
+semesters = ['FL2016', 'SP2017', 'FL2017', 'SP2018', 'FL2018']
 for semester in semesters:
     directory = "hw_reviews_" + semester
     for folder in os.listdir(directory):
@@ -23,6 +23,6 @@ for semester in semesters:
             hw_number = review.split('_')[0][2:]
             hw_number = hw_number if hw_number != 'M' else '-1'
             label = folder
-            hw_reviews += hw_id + '\t' + hw_number + '\t' + label + '\t' + text + '\n'
+            hw_reviews += semester + '\t' + hw_id + '\t' + hw_number + '\t' + label + '\t' + text + '\n'
 with open('hw_reviews.txt', 'w') as file:
     file.write(hw_reviews)

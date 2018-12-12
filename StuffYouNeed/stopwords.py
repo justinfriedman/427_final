@@ -2,7 +2,7 @@
 
 from sys import stdin
 
-with open("new_stop_list") as file:
+with open("english_stop.txt") as file:
     text = file.read()
 stopword_set = set(text.split("\n"))
 for line in stdin:
