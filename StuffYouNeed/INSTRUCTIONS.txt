@@ -3,3 +3,5 @@
     * make sure you run the hadoop fs -put command in a different terminal in the SAME directory
 3. Then run the commands in the preprocess.hql file, which will generate a table called "preprocessed_reviews"
 4. Run the commands in the "basic_sentiment_ownlabels.hql" script, which will generate a table called "review_scores_ownlabels". This table has the schema (semester, hw_id, hw_number, our classification, score)
+
+Note: the files "filter_reviews.py" and "basic_sentiment.hql" are used to compare our predictions with the ground truth. "basic_sentiment.hql" creates a table in the form (semester, hw_id, hw_number, label, score, match), where "label" is the ground truth label, and "match" is either True or False, depending on if our classification matches her label. 
