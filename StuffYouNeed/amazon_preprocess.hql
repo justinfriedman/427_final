@@ -21,3 +21,4 @@ USING 'amazonstopwords.py' AS (
 	overall STRING, 
 	reviewText STRING) 
 FROM movies_tv_raw;
+

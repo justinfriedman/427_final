@@ -1,3 +1,4 @@
+-- Jar file helps to parse JSON to HIVE
 ADD JAR s3://lrivkin-emr/json-serde-1.3.8-jar-with-dependencies.jar;
 
 CREATE EXTERNAL TABLE movies_tv_in (
@@ -11,6 +12,6 @@ CREATE EXTERNAL TABLE movies_tv_in (
 	unixReviewTime INT,
 	reviewTime STRING
 	)
-ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
-LOCATION 's3://lrivkin-emr/data/reviews_Movies_and_TV_5.json';
+ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe';
 
+LOAD DATA INPATH 's3://lrivkin-emr/data/reviews_Movies_and_TV_5.json' INTO TABLE movies_tv_in;
