@@ -19,7 +19,6 @@ for line in lines:
 		pass
 
 for line in stdin:
-	match = "False"
 	classification = ""
 	pos_word_count = 0.0
 	neg_word_count = 0.0
@@ -48,7 +47,7 @@ for line in stdin:
 						pos_word_count += word_scores[word]
 	try:
 		score = float(pos_word_count - neg_word_count)/(pos_word_count + neg_word_count)
-		score = (score+1)*4.0/2 + 1
+		score = (score+1)*2.0 + 1
 	except:
 		pass
 	
