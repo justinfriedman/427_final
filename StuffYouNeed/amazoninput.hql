@@ -1,5 +1,6 @@
+ADD JAR s3://lrivkin-emr/json-serde-1.3.8-jar-with-dependencies.jar;
 
-CREATE TABLE music_small (
+CREATE EXTERNAL TABLE movies_tv_in (
     reviewerID STRING,
 	asin STRING,
 	reviewerName STRING,
@@ -10,7 +11,6 @@ CREATE TABLE music_small (
 	unixReviewTime INT,
 	reviewTime STRING
 	)
-ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe';
-
-LOAD DATA LOCAL INPATH 'tiny_reviews.json' INTO TABLE music_small;
+ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
+LOCATION 's3://lrivkin-emr/data/reviews_Movies_and_TV_5.json';
 
