@@ -9,3 +9,4 @@ When labels are entirely accurate, model accuracy is 75%.
 
 Detailed report of the iterative development process with graphics: https://docs.google.com/document/d/1rwPqS359AcGHbUwOmmfb6hgK3l2qnCGxyl8FZqwZi-M/edit?usp=sharing
 
+![alt text](https://raw.githubusercontent.com/justinfriedman/427_final/master/pipeline.png?token=AH8E0nWKyGJaUXmJexoEU9c2jewpLBFBks5cdeFXwA%3D%3D "Data Pipeline")
